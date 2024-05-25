@@ -1,0 +1,56 @@
+<section class="w-50 mx-auto min-vh-100 pt-4">
+    <app-star title="Contact Me " customColor="#2b3d4f"></app-star>
+
+    <form action="" [formGroup]="registerForm" (ngSubmit)="sendMessag()">
+        
+        <div class="mb-2">
+            <label class="text-second position-relative top-0 " [class.__top]="!userName.length" for="name ">UserName :</label>
+            <input  #inputName formControlName="name" class="form-control border-0 border-bottom rounded-0 py-2 position-relative"  name="userName" type="text"placeholder="UserName" id="name" [(ngModel)]="userName" >
+        </div>
+        <!-- handel error for userName -->
+        <div class="alert-danger" *ngIf="registerForm.get('name')?.errors &&( registerForm.get('name')?.touched || inputName.value.length>0 )" >
+            <p class="text-muted" *ngIf="registerForm.get('name')?.getError('required') "><span class="text-danger">*</span> Name is Required</p>
+            <p class="text-muted" *ngIf="registerForm.get('name')?.getError('minlength')"><span class="text-danger">*</span> Min Length 3 letter</p>
+        </div>
+        
+        <div class="mb-2">
+            <label class="text-second position-relative top-0 " [class.__top]="!userEmail.length" for="name ">Email :</label>
+            <input  #inputEmail formControlName="email" class="form-control border-0 border-bottom rounded-0 py-2 position-relative"  name="Email" type="email" placeholder="Email" id="name" [(ngModel)]="userEmail" >
+        </div>
+        <!-- handel error for Email -->
+        <div class="alert-danger" *ngIf="registerForm.get('email')?.errors &&( registerForm.get('email')?.touched || inputEmail.value.length>0 )" >
+            <p class="text-muted" *ngIf="registerForm.get('email')?.getError('required') "><span class="text-danger">*</span> email is Required</p>
+            <p class="text-muted" *ngIf="registerForm.get('email')?.getError('email')"><span class="text-danger">*</span> Enter Valid Email</p>
+        </div>
+        
+        <div class="mb-2">
+            <label class="text-second position-relative top-0 " [class.__top]="!userPhone.length" for="name ">Phone :</label>
+            <input  #inputPhone formControlName="phone" class="form-control border-0 border-bottom rounded-0 py-2 position-relative"  name="phone" type="tel"placeholder="Phone" id="name" [(ngModel)]="userPhone" >
+        </div>
+        <!-- handel error for Phone -->
+        <div class="alert-danger" *ngIf="registerForm.get('phone')?.errors &&( registerForm.get('phone')?.touched || inputPhone.value.length>0 )" >
+            <p class="text-muted" *ngIf="registerForm.get('phone')?.getError('required') "><span class="text-danger">*</span> phone is Required</p>
+            <p class="text-muted" *ngIf="registerForm.get('phone')?.getError('pattern')"><span class="text-danger">*</span> Accept only Egypt phone number </p>
+        </div>
+        
+        <div class="mb-2">
+            <label class="text-second position-relative top-0 " [class.__top]="!userMessage.length" for="phone ">UserMessage :</label>
+            <input  #inputMessage formControlName="message" class="form-control border-0 border-bottom rounded-0 py-2 position-relative"  name="userName" type="text"placeholder="Message" id="name" [(ngModel)]="userMessage" >
+        </div>
+        <!-- handel error for userName -->
+        <div class="alert-danger" *ngIf="registerForm.get('messge')?.errors &&( registerForm.get('messge')?.touched || inputMessage.value.length>0 )" >
+            <p class="text-muted" *ngIf="registerForm.get('messge')?.getError('required') "><span class="text-danger">*</span> Messge is Required</p>
+        </div>
+        
+   
+
+      
+
+        <button   class="btn btn-primary">send Message</button>
+
+    </form>
+
+
+
+
+</section>

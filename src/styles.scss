@@ -1,0 +1,37 @@
+:root {
+    --main-color: #2b3d4f;
+    --second-color: #1abc9c;
+
+}
+
+.active-link {
+    background-color: var(--second-color) !important;
+    color: var(--main-color) !important;
+    border-radius: 5px;
+}
+
+.bg-main {
+    background-color: var(--main-color) !important;
+}
+
+.bg-second {
+    background-color: var(--second-color) !important;
+}
+
+.text-main {
+    color: var(--main-color) !important;
+   
+}
+
+.text-second {
+    color: var(--second-color) !important;
+}
+
+a {
+    color: white !important;
+}
+
+.paddingtop {
+    padding-top: 70px !important;
+}
+

@@ -1,0 +1,15 @@
+.form-control:focus{
+    box-shadow: none ;
+}
+
+.__top{
+    top: 40px !important;
+}
+
+label{
+    margin-bottom: 7px;
+    transition: all .44s;
+}
+button:disabled{
+    cursor: not-allowed;
+}

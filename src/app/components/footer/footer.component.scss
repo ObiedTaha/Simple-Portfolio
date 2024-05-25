@@ -1,0 +1,50 @@
+:host {
+    margin-top: auto;
+}
+
+.fa-linkedin {
+    cursor: pointer;
+     transition: all .4s;
+    &:hover {
+        color: #0077B5;
+    }
+}
+
+.fa-github {
+    cursor: pointer;
+     transition: all .4s;
+  
+   
+    &:hover {
+        color: black;
+
+    }
+}
+.fa-facebook {
+    cursor: pointer;
+     transition: all .4s;
+    &:hover {
+        color: blue;
+
+    }
+}
+
+.fa-whatsapp {
+    cursor: pointer;
+     transition: all .4s;
+    &:hover {
+        color: #00d757;
+
+    }
+}
+
+.upFooter{
+    background-color: #111;
+}
+
+.downFooter{
+    background-color: #000;
+}
+hr{
+   color: white;
+}
